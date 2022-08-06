@@ -1,0 +1,12 @@
+.header-display {
+    height: 125px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}

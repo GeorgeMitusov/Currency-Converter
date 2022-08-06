@@ -1,0 +1,13 @@
+.currency-input {
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+}

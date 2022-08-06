@@ -1,0 +1,25 @@
+<div class="currency-input" ng-controller="myCtrl">
+ 
+    <div class="currency-input-wrap" ng-model="selectedCur">
+        <h1> {{ title }} </h1>
+        <div class="details">
+            <h1> {{ amount }} </h1>
+            <h1> {{ currency }} </h1>
+        </div>
+        <input
+            type="text"
+            placeholder="..."
+            [(ngModel)]="amount"
+            (ngModelChange)="amountChange($event)"
+            (blur)="converting()"
+        >
+        <select 
+            [(ngModel)]="currency" 
+            (ngModelChange)="currencyChange(currency)"
+            (blur)="converting()"
+        >
+            <option *ngFor="let currency of currencies" [selected]="currency"> {{ currency }} </option>
+        </select>
+    </div>
+
+</div>
