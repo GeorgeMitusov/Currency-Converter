@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CurrencyService } from 'src/app/services/currency.service';
 
 @Component({
@@ -10,6 +10,8 @@ export class HeaderDisplayComponent implements OnInit {
 
   usd:any = { base: 'USD', rates: { UAH: " 36.597611" }}
   eur:any = { base: 'EUR', rates: { UAH: " 37.421251" }}
+
+  @Input() format!: (number:any) => void;
 
   constructor(private service:CurrencyService) { }
 

@@ -11,12 +11,14 @@ export class AppComponent implements OnInit {
   
   title = "Currency Swap"
 
-  fromCur:string = "USD";
-  toCur:string = "EUR";
-  fromAmount:number = 0;
-  toAmount:number = 0;
+  fromCur : string = "USD";
+  toCur : string = "USD";
+  fromAmount: number = 0;
+  toAmount : number = 0;
 
-  rate:any = {}  
+  rates : any = []
+
+  rate : any = {}  
 
   format = (number:any) =>  {
     return number.toFixed(2)
@@ -47,6 +49,19 @@ export class AppComponent implements OnInit {
         this.toAmount = this.format(this.fromAmount * this.rate);
       })
   }
+
+  public convertSecondValue = () => {
+    this.service.getConvertedValue(this.fromCur, this.toCur)
+      .subscribe((res : any) => {
+        this.rate = res.info.rate;
+        this.fromAmount = this.format(this.toAmount / this.rate);
+      })
+  }
   
-  ngOnInit() {}
+  ngOnInit() {
+    this.service.getUsdRate()
+      .subscribe( (res:any) => {
+        this.rates = res.rates;
+      })
+  }
 }

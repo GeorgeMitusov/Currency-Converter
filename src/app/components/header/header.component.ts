@@ -7,9 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  // title = 'Currency Swap';
-
   @Input() headTitle: string = '';
+  @Input() format!: (number:any) => void;
 
   constructor() { }
 

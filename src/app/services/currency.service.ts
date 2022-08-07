@@ -4,13 +4,12 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
+
 export class CurrencyService {
+  
   private usdUrl = 'https://api.exchangerate.host/latest?base=USD'
   private eurUrl = 'https://api.exchangerate.host/latest?base=EUR'
   private convertUrl = 'https://api.exchangerate.host/convert?'
-  // private convertUrl = 'https://api.exchangerate.host/convert?from=USD&to=EUR'
-  //https://api.exchangerate.host/latest?base=EUR 
-  //https://api.exchangerate.host/latest?base=UAH 
   
   constructor( private httpClient: HttpClient) { }
 

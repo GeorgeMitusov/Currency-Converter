@@ -1,13 +1,84 @@
 .currency-input {
-    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.currency-input-wrap {
+    width: 40%;
+    padding: 15px;
+    border-radius: 15px;
+
+    color: white;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 20px;
 }
 
 .details {
+    font-size: .9rem;
+
+    color: lightgray;
+
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    padding: 1px;
+}
+
+input {
+    font-size: 1.1rem;
+    
+    width: 80%;
+    padding: 8px;
+    line-height: 2;
+
+    background: linear-gradient(#141e30, #243b55);
+    color: lightgray;
+    
+    border: none;
+    border-top-left-radius: 0.2rem;
+    border-bottom-left-radius: 0.2rem;
+    
+    transition: box-shadow 300ms;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input::placeholder {
+    color: lightgray;
+}
+  
+input:focus {
+    outline: none;
+    box-shadow: 0.2rem 0.4rem .8rem black;
+}
+
+select {
+    width: 30%;
+    font-size: 1.1rem;
+
+    color: lightgray;
+    background: linear-gradient(#141e30, #243b55);
+    
+    border: none;
+    border-top-right-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+}
+
+select:focus {
+    color: gray;
+    outline: none;
+    box-shadow: 0.2rem 0.8rem 1.6rem black;
 }

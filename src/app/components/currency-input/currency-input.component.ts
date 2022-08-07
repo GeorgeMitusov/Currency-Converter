@@ -7,11 +7,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CurrencyInputComponent implements OnInit {
   
-  currencies = ["USD", "EUR", "UAH"];
-  
-  @Input() title:string = '';
-  @Input() currency:string = '';
-  @Input() amount:number = 0;
+  @Input() title : string = '';
+  @Input() rates : any = [];
+  @Input() currency : string = '';
+  @Input() amount?: number;
   @Input() currencyChange!: (e: string) => void;
   @Input() amountChange!: (e: number) => void;
   @Input() converting!: () => void;

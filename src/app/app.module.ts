@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     HeaderComponent,
     HeaderDisplayComponent,
-    CurrencyInputComponent
+    CurrencyInputComponent,
   ],
   imports: [
     BrowserModule, 
