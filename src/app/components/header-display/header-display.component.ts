@@ -10,6 +10,8 @@ export class HeaderDisplayComponent implements OnInit {
 
   usd:any = { base: 'USD', rates: { UAH: " 36.597611" }}
   eur:any = { base: 'EUR', rates: { UAH: " 37.421251" }}
+  usdRate:any= Number(this.usd.rates.UAH);
+  eurRate:any= Number(this.eur.rates.UAH);
 
   @Input() format!: (number:any) => void;
 

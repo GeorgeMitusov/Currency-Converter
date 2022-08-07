@@ -46,7 +46,7 @@ export class AppComponent implements OnInit {
     this.service.getConvertedValue(this.fromCur, this.toCur)
       .subscribe((res : any) => {
         this.rate = res.info.rate;
-        this.toAmount = this.format(this.fromAmount * this.rate);
+        this.toAmount = this.format(Number(this.fromAmount) * Number(this.rate));
       })
   }
 
@@ -54,7 +54,7 @@ export class AppComponent implements OnInit {
     this.service.getConvertedValue(this.fromCur, this.toCur)
       .subscribe((res : any) => {
         this.rate = res.info.rate;
-        this.fromAmount = this.format(this.toAmount / this.rate);
+        this.fromAmount = this.format(Number(this.toAmount) / Number(this.rate));
       })
   }
   
